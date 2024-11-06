@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Resizer with Size Display and Download</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Resize and Download Your Image</h2>
+        <input type="file" id="imageInput" accept="image/*"><br><br>
+        <label for="width">Width:</label>
+        <input type="number" id="width" placeholder="Enter width in px">
+        <label for="height">Height:</label>
+        <input type="number" id="height" placeholder="Enter height in px"><br><br>
+        <button onclick="resizeImage()">Resize Image</button><br><br>
+        
+        <!-- Display Image Info and Size -->
+        <p id="imageSize">Image Size: Not available</p>
+
+        <canvas id="canvas" style="display: none;"></canvas>
+        <img id="resizedImage" alt="Resized Image"><br><br>
+        
+        <!-- Download link -->
+        <a id="downloadLink" style="display: none;" download="resized-image.png">Download Resized Image</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
