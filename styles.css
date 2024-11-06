@@ -1,67 +1,109 @@
 /* Basic styling for the page */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff; /* Light blue background */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    color: #333;
 }
 
 /* Container for the resizer interface */
 .container {
     background-color: #fff;
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    max-width: 450px;
     width: 100%;
     text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect for the container */
+.container:hover {
+    transform: scale(1.05); /* Slight zoom effect */
 }
 
 /* Headline */
 h2 {
-    color: #333;
+    color: #1a73e8; /* Bright blue color */
     margin-bottom: 20px;
-    font-size: 24px;
+    font-size: 28px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+h2:hover {
+    color: #4285f4; /* Slightly darker blue on hover */
 }
 
 /* File input and dimension inputs */
 input[type="file"],
 input[type="number"] {
     width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    padding: 12px;
+    margin: 12px 0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
     font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="file"]:hover,
+input[type="number"]:hover {
+    border-color: #1a73e8; /* Blue border on hover */
 }
 
 /* Button styling */
 button {
-    background-color: #4CAF50;
+    background-color: #4CAF50; /* Green background */
     color: white;
-    padding: 10px 20px;
+    padding: 12px 25px;
     margin: 10px 0;
     border: none;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 8px;
+    font-size: 18px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #45a049; /* Darker green */
+    transform: translateY(-3px); /* Button lift effect */
 }
 
-/* Displayed image */
+button:active {
+    background-color: #388e3c; /* Even darker green when clicked */
+}
+
+/* Image display */
 img {
     margin-top: 20px;
     max-width: 100%;
     height: auto;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+}
+
+/* Display Image Info and Size */
+#imageSize {
+    font-size: 16px;
+    color: #ff5722; /* Orange color for file size text */
+    font-weight: bold;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+#imageSize:hover {
+    color: #d32f2f; /* Red color on hover */
 }
 
 /* Download link styling */
@@ -69,15 +111,21 @@ img {
     display: block;
     margin-top: 20px;
     text-decoration: none;
-    background-color: #007BFF;
+    background-color: #007bff;
     color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 16px;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 18px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
 }
 
 #downloadLink:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-3px); /* Download button lift effect */
+}
+
+#downloadLink:active {
+    background-color: #003f75; /* Even darker blue when clicked */
 }
